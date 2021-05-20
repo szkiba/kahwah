@@ -1,12 +1,10 @@
 const path = require("path"); // eslint-disable-line
-const { CleanWebpackPlugin } = require("clean-webpack-plugin"); // eslint-disable-line
-const CopyPlugin = require("copy-webpack-plugin"); // eslint-disable-line
 
 module.exports = {
   mode: "production",
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "lib"),
     filename: "index.js",
     libraryTarget: "commonjs",
   },
@@ -23,10 +21,4 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new CopyPlugin({
-      patterns: [{ from: "src/index.d.ts" }],
-    }),
-  ],
 };

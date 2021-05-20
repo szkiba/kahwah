@@ -2,7 +2,7 @@
   "theme": "markdown",
   "hideBreadcrumbs": true,
   "disableSources": true,
-  "entryPoints": ["src/index.d.ts"],
+  "entryPoints": ["lib/index.d.ts"],
   "plugin": ["typedoc-plugin-markdown"],
   "readme": "none"
 }
