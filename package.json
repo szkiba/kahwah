@@ -6,10 +6,6 @@
     "workflow",
     "k6"
   ],
-  "main": "./dist/index.js",
-  "exports": {
-    "./": "./dist/"
-  },
   "homepage": "https://github.com/szkiba/kahwah",
   "license": "MIT",
   "repository": {
