@@ -3,7 +3,7 @@ module.exports = {
   env: {
     node: true,
   },
-  plugins: ["prettier"],
+  plugins: ["prettier", "markdown"],
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: "module",
@@ -12,5 +12,5 @@ module.exports = {
     "prettier/prettier": ["error", { printWidth: 144 }],
     "max-len": ["error", { code: 144 }],
   },
-  extends: ["eslint:recommended", "prettier"],
+  extends: ["eslint:recommended", "plugin:markdown/recommended", "prettier"],
 };

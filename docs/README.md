@@ -21,6 +21,7 @@ This makes it easy to connect tests as workfow test steps.
 - [describe](README.md#describe)
 - [it](README.md#it)
 - [options](README.md#options)
+- [step](README.md#step)
 - [thresholds](README.md#thresholds)
 
 ### Functions
@@ -54,6 +55,14 @@ k6 options required for threshold handling.
 
 ___
 
+### step
+
+• `Const` **step**: [*SuiteFunction*](interfaces/suitefunction.md)
+
+Describe a "suite" with the given `title` and callback `fn` containing nested test-cases. This suite should not be executed when any of previous steps are failed.
+
+___
+
 ### thresholds
 
 • `Const` **thresholds**: *object*
@@ -74,7 +83,7 @@ ___
 
 ### default
 
-▸ **default**(`ctx?`: [*Context*](interfaces/context.md)): *void*
+▸ **default**(`data?`: [*Context*](interfaces/context.md)): *void*
 
 Default k6 function.
 
@@ -82,6 +91,6 @@ Default k6 function.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `ctx?` | [*Context*](interfaces/context.md) | initial suite context variables (return value of setup()) |
+| `data?` | [*Context*](interfaces/context.md) | initial suite context variables (return value of setup()) |
 
 **Returns:** *void*

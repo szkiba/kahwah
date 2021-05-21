@@ -20,7 +20,6 @@ Describe a "suite" with the given `title` and callback `fn` containing nested te
 ### Properties
 
 - [skip](suitefunction.md#skip)
-- [step](suitefunction.md#step)
 
 ## Properties
 
@@ -29,11 +28,3 @@ Describe a "suite" with the given `title` and callback `fn` containing nested te
 • **skip**: [*PendingSuiteFunction*](pendingsuitefunction.md)
 
 Indicates this suite should not be executed.
-
-___
-
-### step
-
-• **step**: [*WorkflowStepFunction*](workflowstepfunction.md)
-
-Indicates this suite is a step of workflow suite and should not be executed when any of previous steps are failed.
