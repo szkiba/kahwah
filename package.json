@@ -1,6 +1,6 @@
 {
   "name": "kahwah",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Test runner for k6, inspired by Mocha",
   "keywords": [
     "workflow",
