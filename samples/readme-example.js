@@ -1,4 +1,4 @@
-import { describe as step, it } from "../lib/index.js";
+import { step, it } from "../lib/index.js";
 
 export { options, default } from "../lib/index.js";
 

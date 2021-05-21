@@ -25,7 +25,7 @@ This section contains an annotated, runnable k6 example script. You can extract 
 cat README.md | codedown js | k6 run -
 ```
 
-Or you can simply download [samples/readme-example.js](samples/readme-example.js) but it is much less fancy :)
+Or you can simply download [example.js](example.js) but it is much less fancy :)
 
 In this example we are using [step](docs/README.md#step) function instead of [describe](docs/README.md#describe). The two function has exactly same API, the only difference is that [step](docs/README.md#step) will skip execution if previous step failed.
 
