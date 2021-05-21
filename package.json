@@ -10,8 +10,15 @@
   ],
   "main": "./lib/index.js",
   "exports": {
-    ".": "./lib/index.js"
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./lib/index.js"
+    }
   },
+  "files": [
+    "lib"
+  ],
+  "types": "./lib/index.d.ts",
   "homepage": "https://github.com/szkiba/kahwah",
   "license": "MIT",
   "repository": {
@@ -24,7 +31,7 @@
   "author": "Ivan Szkiba",
   "scripts": {
     "build": "webpack",
-    "lint": "eslint .",
+    "lint": "package-check && eslint .",
     "docs": "typedoc",
     "test": "find test -name '*js' | xargs -n 1 k6 run --no-usage-report",
     "samples": "find samples -name '*js' | xargs -n 1 k6 run --no-usage-report",
@@ -33,6 +40,7 @@
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.2",
+    "@skypack/package-check": "^0.2.2",
     "babel-loader": "^8.2.2",
     "codedown": "^2.1.6",
     "context": "^1.1.3",
