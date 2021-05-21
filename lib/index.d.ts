@@ -51,11 +51,6 @@ interface SuiteFunction {
    * Indicates this suite should not be executed.
    */
   skip: PendingSuiteFunction;
-
-  /**
-   * Indicates this suite is a step of workflow suite and should not be executed when any of previous steps are failed.
-   */
-  step: WorkflowStepFunction;
 }
 
 interface TestFunction {
@@ -83,6 +78,11 @@ interface PendingTestFunction {
 export declare const describe: SuiteFunction;
 
 /**
+ * Describe a "suite" with the given `title` and callback `fn` containing nested test-cases. This suite should not be executed when any of previous steps are failed.
+ */
+export declare const step: SuiteFunction;
+
+/**
  * Describe a specification or test-case with the given `title` and callback `fn` acting as a thunk.
  */
 export declare const it: TestFunction;
@@ -105,6 +105,6 @@ export declare const thresholds: object;
 /**
  * Default k6 function.
  *
- * @param ctx initial suite context variables (return value of setup())
+ * @param data initial suite context variables (return value from setup())
  */
-export default function (ctx?: Context): void;
+export default function (data?: Context): void;

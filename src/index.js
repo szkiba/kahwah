@@ -87,17 +87,17 @@ export class Flow {
     this.steps.push(this._newStep(title, fn, false));
   }
 
-  run(vars) {
+  run(data) {
     if (this.id) {
-      group(this.title, () => this._run(vars));
+      group(this.title, () => this._run(data));
     } else {
-      this._run(vars);
+      this._run(data);
     }
   }
 
-  _run(vars) {
+  _run(data) {
     let success = true;
-    this.context.run(vars, (ctx) => {
+    this.context.run(data, (ctx) => {
       for (const step of this.steps) {
         if (!success && step.workflow) {
           continue;
@@ -107,9 +107,7 @@ export class Flow {
           if (step.workflow) {
             success = false;
           }
-          for (const e of step.exceptions) {
-            console.error(e);
-          }
+          step.exceptions.forEach((e) => console.error(e));
         }
 
         if (ctx.sleep) {
@@ -126,7 +124,7 @@ export class Flow {
       fn();
       success = true;
     } catch (e) {
-      step.exceptions.push(e);
+      step.exceptions.push((err = e));
       step.errors.add(1);
     } finally {
       if (success) {
@@ -142,11 +140,13 @@ const flow = new Flow();
 
 export const describe = (title, fn) => flow.suite(title, fn);
 describe.skip = (title, fn) => flow.skip(title, fn);
-describe.step = (title, fn) => flow.step(title, fn);
+
+export const step = (title, fn) => flow.step(title, fn);
+step.skip = (title, fn) => flow.skip(title, fn);
 
 export const it = (title, fn) => flow.it(title, fn);
 it.skip = () => {};
 
 export const context = () => flow.context.use();
 
-export default (vars) => flow.run(vars);
+export default (data) => flow.run(data);
