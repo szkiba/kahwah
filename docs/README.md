@@ -91,6 +91,6 @@ Default k6 function.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `data?` | [*Context*](interfaces/context.md) | initial suite context variables (return value of setup()) |
+| `data?` | [*Context*](interfaces/context.md) | initial suite context variables (return value from setup()) |
 
 **Returns:** *void*
