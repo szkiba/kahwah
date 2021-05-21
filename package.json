@@ -12,9 +12,6 @@
   "exports": {
     ".": "./lib/index.js"
   },
-  "files": [
-    "lib"
-  ],
   "types": "./lib/index.d.ts",
   "homepage": "https://github.com/szkiba/kahwah",
   "license": "MIT",
