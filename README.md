@@ -10,7 +10,7 @@ Test runner for [k6](https://k6.io/). The design of the Kahwah library was inspi
  - defines [thresholds](docs/README.md#thresholds) for test errors
  - measure [describe](docs/README.md#describe)/[step](docs/README.md#step) execution time and provide it as k6 metrics
  - published as [NPM package](https://www.npmjs.com/package/kahwah)
- - importable from CDN providers (ie: "https://cdn.jsdelivr.net/npm/kahwah)
+ - importable from CDN providers (ie: https://cdn.jsdelivr.net/npm/kahwah)
  - minified size is ~3k
 
 ## Documentation
