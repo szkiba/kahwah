@@ -1,6 +1,6 @@
 {
   "name": "kahwah",
-  "version": "0.1.7",
+  "version": "0.1.6",
   "description": "Test runner for k6, inspired by Mocha",
   "keywords": [
     "workflow",
@@ -10,10 +10,7 @@
   ],
   "main": "./lib/index.js",
   "exports": {
-    ".": {
-      "require": "./lib/index.js",
-      "import": "./lib/index.js"
-    }
+    ".": "./lib/index.js"
   },
   "files": [
     "lib"
@@ -31,7 +28,7 @@
   "author": "Ivan Szkiba",
   "scripts": {
     "build": "webpack",
-    "lint": "package-check && eslint .",
+    "lint": "eslint .",
     "docs": "typedoc",
     "test": "find test -name '*js' | xargs -n 1 k6 run --no-usage-report",
     "samples": "find samples -name '*js' | xargs -n 1 k6 run --no-usage-report",
@@ -40,7 +37,6 @@
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.2",
-    "@skypack/package-check": "^0.2.2",
     "babel-loader": "^8.2.2",
     "codedown": "^2.1.6",
     "context": "^1.1.3",
