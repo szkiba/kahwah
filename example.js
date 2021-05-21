@@ -1,4 +1,4 @@
-import { step, it } from "https://cdn.jsdelivr.net/npm/kahwah";
+import { describe as step, it } from "https://cdn.jsdelivr.net/npm/kahwah";
 
 export { options, default } from "https://cdn.jsdelivr.net/npm/kahwah";
 

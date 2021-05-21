@@ -32,7 +32,7 @@ In this example we are using [step](docs/README.md#step) function instead of [de
  1. Import latest release of Kahwah library from CDN (for example from jsDelivr)
 
     ```js
-    import { step, it } from "https://cdn.jsdelivr.net/npm/kahwah";
+    import { describe as step, it } from "https://cdn.jsdelivr.net/npm/kahwah";
     ```
 
     As an alternative, you can import latest development version from GitHub
